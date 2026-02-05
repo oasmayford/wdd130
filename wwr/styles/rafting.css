@@ -1,10 +1,15 @@
-root {
-    --primary-color: #0b3c5d;
-    --secondary-color: #1d7a8c;
-    --accent1-color: #f4f4f4;
-    --accent2-color: #f9a826;
-    --heading-font: "Georgia", serif;
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
 * {
@@ -15,8 +20,7 @@ root {
 
 body {
     font-family: var(--body-font);
-    color: var(--primary-color);
-    background-color: var(--accent1-color);
+    color: var(--accent1-color);
 }
 
 header,
@@ -24,31 +28,6 @@ main,
 footer {
     width: 840px;
     margin: 0 auto;
-}
-
-header {
-    background-color: var(--primary-color);
-    padding: 16px;
-}
-
-header img {
-    height: 60px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 16px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: var(--accent2-color);
 }
 
 h1,
@@ -65,6 +44,47 @@ article {
     padding: 8px;
 }
 
+.socialmedia a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--accent2-color);
+}
+
+.socialmedia a {
+    text-decoration: none;
+    /* remove underline */
+    margin-right: 16px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+}
+
 .hero {
     position: relative;
 }
@@ -75,55 +95,18 @@ article {
     height: auto;
 }
 
-.hero h1 {
+h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
-    background-color: var(--secondary-color);
+    background-color: var(--accent1-color);
     color: #fff;
-    /* make sure contrast is enough */
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 70%;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 12px;
-    border-radius: 5px;
 }
 
 .hero article img {
     float: right;
     width: 125px;
-    margin-left: 16px;
-    border-radius: 4px;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 16px;
-}
-
-footer p {
-    margin-bottom: 8px;
-}
-
-.socialmedia {
-    margin-top: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    margin: 0 8px;
 }

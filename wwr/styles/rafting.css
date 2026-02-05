@@ -1,41 +1,41 @@
-/* ===============================
+/* ==============================
    CSS VARIABLES
-   =============================== */
+   ============================== */
 :root {
-    --primary-color: #1b4965;
-    /* deep blue */
-    --secondary-color: #62b6cb;
-    /* river blue */
-    --accent1-color: #003049;
-    /* dark navy */
-    --accent2-color: #eae2b7;
-    /* light sand */
+    --primary-color: #0b3c5d;
+    /* deep river blue */
+    --secondary-color: #1d7a8c;
+    /* water teal */
+    --accent1-color: #f4f4f4;
+    /* light background */
+    --accent2-color: #f9a826;
+    /* adventure gold */
 
-    --heading-font: "Georgia", "Times New Roman", serif;
+    --heading-font: "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* ===============================
-   CSS RESET
-   =============================== */
+/* ==============================
+   RESET
+   ============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===============================
-   BODY STYLES
-   =============================== */
+/* ==============================
+   BODY
+   ============================== */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: var(--accent2-color);
+    color: #333;
+    background-color: var(--accent1-color);
 }
 
-/* ===============================
-   PAGE WIDTH & CENTERING
-   =============================== */
+/* ==============================
+   LAYOUT WIDTH
+   ============================== */
 header,
 main,
 footer {
@@ -43,19 +43,49 @@ footer {
     margin: 0 auto;
 }
 
-/* ===============================
+/* ==============================
+   HEADER & NAVIGATION
+   ============================== */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+header img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+/* ==============================
    HEADINGS
-   =============================== */
+   ============================== */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* ===============================
-   BASIC SPACING
-   =============================== */
-nav,
+/* ==============================
+   SPACING
+   ============================== */
 p,
 section,
 article {
@@ -63,54 +93,67 @@ article {
     padding: 8px;
 }
 
-/* ===============================
-   SOCIAL MEDIA LINKS
-   =============================== */
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* ===============================
+/* ==============================
    HERO SECTION
-   =============================== */
+   ============================== */
 .hero {
     position: relative;
 }
 
-/* Hero Image */
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Hero Heading Overlay */
+/* HERO HEADING OVERLAY */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #ffffff;
+    background-color: rgba(11, 60, 93, 0.7);
+    color: white;
 }
 
-/* Hero Article Overlay */
+/* HERO ARTICLE OVERLAY */
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgb(0 0 0 / 60%);
-    color: #ffffff;
-    padding: 16px;
     width: 70%;
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
-/* Hero Article Image */
+/* HERO ARTICLE IMAGE */
 .hero article img {
     float: right;
     width: 125px;
     margin-left: 16px;
-    border: 2px solid #ffffff;
+    border-radius: 4px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+/* SOCIAL MEDIA */
+.socialmedia {
+    margin-top: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 32px;
+    margin: 0 8px;
 }

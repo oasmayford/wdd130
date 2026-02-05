@@ -1,0 +1,116 @@
+/* ===============================
+   CSS VARIABLES
+   =============================== */
+:root {
+    --primary-color: #1b4965;
+    /* deep blue */
+    --secondary-color: #62b6cb;
+    /* river blue */
+    --accent1-color: #003049;
+    /* dark navy */
+    --accent2-color: #eae2b7;
+    /* light sand */
+
+    --heading-font: "Georgia", "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* ===============================
+   CSS RESET
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY STYLES
+   =============================== */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: var(--accent2-color);
+}
+
+/* ===============================
+   PAGE WIDTH & CENTERING
+   =============================== */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* ===============================
+   HEADINGS
+   =============================== */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* ===============================
+   BASIC SPACING
+   =============================== */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ===============================
+   SOCIAL MEDIA LINKS
+   =============================== */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+    position: relative;
+}
+
+/* Hero Image */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+}
+
+/* Hero Article Overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(0 0 0 / 60%);
+    color: #ffffff;
+    padding: 16px;
+    width: 70%;
+}
+
+/* Hero Article Image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    border: 2px solid #ffffff;
+}
